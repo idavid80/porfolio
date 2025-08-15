@@ -19,6 +19,8 @@
 ## 2. Estructura de carpetas
 
 ```textplain
+api
+├── contact.js
 src/
 ├── assets/
 │   ├── icons/
