@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Hello, I'm David",
+    "subtitle": "Big Data, AI and Web/App Developer",
+    "greeting": "Hello, I'm",
+    "name": "David",
+    "role": "Big Data, AI & Web/App Developer",
+    "cta_projects": "View Projects",
+    "cta_cv": "Download CV",
+    "intro_cita": "Coding dreams, creating solutions.",
+    "paragraph": "Software developer with a solid foundation in the MERN stack, specialising in creating robust and efficient digital solutions. My training in Computer Engineering and my experience in full-stack development allow me to transform ideas into innovative projects. I am currently expanding my skills in Artificial Intelligence and Big Data.",
+    "modal_cv_title": "Important Notice",
+    "modal_cv_message": "To protect my privacy, the CV you are about to download does not include my personal details. If you would like to contact me, please use the contact form on the website.",
+    "modal_cv_download_btn": "Continue and download",
+    "modal_cv_contact_btn": "Go to Contact",
+    "paragraph_1": "I am a passionate application developer specialising in the MERN stack. With a solid educational background, I have redirected my career towards software development to turn ideas into robust and efficient digital solutions.",
+    "paragraph_2" : "My passion for software development is reflected in my solid academic background and ongoing specialisation. I am currently pursuing a degree in Computer Engineering and hold a Higher Degree in Multiplatform Application Development (DAM), as well as a specialisation in Artificial Intelligence and Big Data. I have strengthened my skills with a full-stack bootcamp and validated my experience with certifications from Google, Meta, and IBM, demonstrating my commitment to technological excellence.",
+    "paragraph_3" : "My goal is clear: to continue growing professionally, applying my passion for code to every project. I am committed to transforming challenges into opportunities and building the future of technology, one project at a time."
+
+  },
+  "about": {
+    "title": "About Me",
+    "propuesta": "I am a developer with experience in web and mobile applications, currently specializing in Big Data and Artificial Intelligence. I combine my background in full-stack development with data analysis, machine learning and cloud solutions.",
+    "skills_title": "Technical Skills",
+    "bio": "My journey in software development began with a passion for problem solving. My training has allowed me to build a solid foundation in full-stack development, while my curiosity has led me to specialise in Big Data and Artificial Intelligence. I consider myself a professional who never stops, always looking for the next opportunity to learn and apply my knowledge to projects that really make a difference."
+  },
+  "projects": {
+    "title": "Projects",
+    "filter_all": "All",
+    "filter_web": "Web",
+    "filter_app": "Apps",
+    "filter_ai": "AI",
+    "filter_bigdata": "Big Data",
+    "view_demo": "Demo",
+    "view_code": "Code",
+    "more_info": "More info",
+    "wine_app": {
+      "title": "Wine App",
+      "description": "App designed for the final degree project (TFG) of DAM."
+    },
+    "marvel_web": {
+      "title": "Marvel Web",
+      "description": "Marvel Characters Explorer: The Bridge challenge project."
+    },
+    "ai_bd": {
+      "title": "AI & Big Data",
+      "description": "Exercises completed during Big Data & AI specialization course."
+    },
+    "bd_dashboard": {
+      "title": "Big Data Dashboard",
+      "description": "Data visualization dashboard for large datasets."
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "read_more": "Read more",
+    "no_posts": "No posts available."
+  },
+  "contact": {
+    "title": "Contact Me",
+    "subtitle": "Feel free to reach out for collaborations or just a friendly hello 👋",
+    "name": "Your Name",
+    "email": "Your Email",
+    "message": "Your Message",
+    "send": "Send Message",
+    "success": "Message sent successfully!",
+    "error": "Something went wrong. Please try again.",
+    "conection": "Connection error with server."
+  }
+}

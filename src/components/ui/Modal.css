@@ -1,0 +1,88 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 0.5rem; /* menor padding en móvil */
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+}
+
+.modal-content.dark {
+  background-color: #111827;
+  color: white;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  z-index: 10;
+}
+
+.modal-header {
+  margin-bottom: 1rem;
+}
+
+.modal-body iframe {
+  width: 100%;
+  height: 70vh;
+  border: none;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 1.5rem 1rem 1rem 1rem;
+    max-width: 100%;
+    max-height: 95vh;
+    border-radius: 0.75rem;
+  }
+
+  .modal-body iframe {
+    height: 60vh;
+  }
+}
+/*aefaf*/
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: flex-end;
+}
+
+.modal-actions .btn-secondary {
+  /* Estilos para el botón de contacto */
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.modal-actions .btn-secondary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}

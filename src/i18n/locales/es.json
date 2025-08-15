@@ -1,0 +1,76 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "blog": "Blog",
+    "contact": "Contacto"
+  },
+  "home": {
+    "title": "Hola, soy David",
+    "subtitle": "Big Data, IA y Desarrollador Web/App",
+    "greeting": "Hola, soy",
+    "name": "David",
+    "role": "Big Data, IA y Desarrollador Web/App",
+    "cta_projects": "Ver Proyectos",
+    "cta_cv": "Descargar CV",
+    "paragraph": "Desarrollador de software con una sólida base en el stack MERN, especializado en crear soluciones digitales robustas y eficientes. Mi formación en Ingeniería Informática y mi experiencia en desarrollo full-stack me permiten transformar ideas en proyectos innovadores. Actualmente, estoy expandiendo mis habilidades en Inteligencia Artificial y Big Data.",
+    "intro_cita": "Codificando sueños, creando soluciones.",
+    "modal_cv_title": "Aviso Importante",
+    "modal_cv_message": "Para proteger mi privacidad, el CV que vas a descargar no incluye mis datos personales. Si quieres contactar conmigo, por favor, utiliza el formulario de contacto de la página web.",
+    "modal_cv_download_btn": "Continuar y descargar",
+    "modal_cv_contact_btn": "Ir a Contacto",
+    "paragraph_1" : "Soy un desarrollador de aplicaciones apasionado, especializado en el stack MERN. Con una formación sólida, he redirigido mi carrera hacia el desarrollo de software para convertir ideas en soluciones digitales robustas y eficientes.",
+    "paragraph_2" : "Mi pasión por el desarrollo de software se refleja en mi sólida formación académica y continua especialización. Estoy cursando el grado de Ingeniería Informática y cuento con un Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM), además de una especialización en Inteligencia Artificial y Big Data. He fortalecido mis habilidades con un bootcamp full-stack y he validado mi experiencia con certificaciones de Google, Meta e IBM, demostrando mi compromiso con la excelencia tecnológica",
+    "paragraph_3" : "Mi objetivo es claro: seguir creciendo profesionalmente, aplicando mi pasión por el código en cada proyecto. Estoy comprometido a transformar desafíos en oportunidades y a construir el futuro de la tecnología, un proyecto a la vez."
+  },
+  "about": {
+    "title": "Sobre mí",
+    "propuesta": "Soy un desarrollador con experiencia en aplicaciones web y móviles, actualmente especializado en Big Data e Inteligencia Artificial. Combino mi trayectoria en desarrollo full-stack con análisis de datos, machine learning y soluciones en la nube.",
+    "skills_title": "Habilidades Técnicas",
+    "bio": "Mi camino en el desarrollo de software comenzó con una pasión por resolver problemas. Mi formación me ha permitido construir una base sólida en el desarrollo full-stack, mientras que mi curiosidad me ha llevado a especializarme en Big Data e Inteligencia Artificial. Me considero un profesional que no se detiene, siempre buscando la próxima oportunidad para aprender y aplicar mis conocimientos en proyectos que realmente hagan la diferencia."
+  },
+  "projects": {
+    "title": "Proyectos",
+    "filter_all": "Todos",
+    "filter_web": "Web",
+    "filter_app": "Apps",
+    "filter_ai": "IA",
+    "filter_bigdata": "Big Data",
+    "view_demo": "Demo",
+    "view_code": "Código",
+    "more_info": "Más información",
+    "wine_app": {
+      "title": "Wine App",
+      "description": "App diseñada para el TFG del grado superior DAM."
+    },
+    "marvel_web": {
+      "title": "Web Universo Marvel",
+      "description": "Explorador de personajes Marvel: proyecto desafío The Bridge."
+    },
+    "ai_bd": {
+      "title": "Big Data e IA",
+      "description": "Ejercicios realizados en el curso de especialización Big Data e IA."
+    },
+    "bd_dashboard": {
+      "title": "Dashboard Big Data",
+      "description": "Panel de visualización de datos para grandes conjuntos de información."
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "read_more": "Leer más",
+    "no_posts": "No hay artículos disponibles."
+  },
+  "contact": {
+    "title": "Contáctame",
+    "subtitle": "No dudes en escribirme para colaborar o simplemente saludar 👋",
+    "name": "Tu nombre",
+    "email": "Tu correo",
+    "message": "Tu mensaje",
+    "send": "Enviar mensaje",
+    "success": "¡Mensaje enviado con éxito!",
+    "error": "Algo salió mal. Por favor, inténtalo de nuevo.",
+    "conection": "Error de conexión con el servidor."
+  }
+}

@@ -1,0 +1,206 @@
+/* ========================================
+   Estilos Base del Navbar
+   ======================================== */
+.navbar {
+  position: fixed; /* Fijo arriba siempre */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  backdrop-filter: blur(8px); /* efecto vidrio */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  height: 4rem;
+}
+
+.dark .navbar {
+  background: rgba(30,41,59,0.6);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+/* ========================================
+   Logo
+   ======================================== */
+.navbar-logo img {
+  display: block;
+  height: 40px;
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.dark .navbar-logo {
+
+}
+
+.navbar-logo img:hover {
+  transform: scale(1.05);
+}
+
+/* ========================================
+   Enlaces escritorio
+   ======================================== */
+.navbar-links {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+  }
+}
+
+.nav-item {
+  font-size: 1rem;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem; /* Área de clic más grande */
+  border-radius: 6px;
+  color: hsl(210, 10%, 35%);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dark .nav-item {
+  color: hsl(210, 10%, 70%);
+}
+
+.nav-item:hover,
+.nav-item:focus {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: hsl(210, 70%, 40%);
+}
+
+.dark .nav-item:hover,
+.dark .nav-item:focus {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: hsl(180, 70%, 50%);
+}
+
+.nav-item.active {
+  color: hsl(210, 70%, 40%);
+  font-weight: bold;
+}
+
+.dark .nav-item.active {
+  color: hsl(180, 70%, 50%);
+}
+
+/* ========================================
+   Controles (lenguaje, tema, menú)
+   ======================================== */
+.navbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lang-toggle {
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: inherit;
+  transition: background-color 0.2s ease;
+}
+
+.menu-toggle {
+  display: block;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+.menu-toggle:hover {
+  color: hsl(210, 70%, 40%);
+}
+
+.dark .menu-toggle:hover {
+  color: hsl(180, 70%, 50%);
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+
+/* ========================================
+   Menú móvil
+   ======================================== */
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.95);
+  width: 100%;
+}
+
+.dark .mobile-menu {
+  background-color: rgba(36, 39, 43, 0.95);
+}
+
+.mobile-menu.open {
+  max-height: 300px;
+  padding: 1rem 1.5rem;
+}
+
+.mobile-nav-item {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  color: hsl(210, 10%, 35%);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dark .mobile-nav-item {
+  color: hsl(210, 10%, 70%);
+}
+
+.mobile-nav-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dark .mobile-nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.mobile-nav-item.active {
+  background-color: hsl(210, 70%, 40%);
+  color: white;
+}
+
+.dark .mobile-nav-item.active {
+  background-color: hsl(180, 70%, 50%);
+  color: hsl(210, 15%, 15%);
+}

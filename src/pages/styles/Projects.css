@@ -1,0 +1,281 @@
+/* ============================
+   MODO OSCURO (default)
+   ============================ */
+.projects {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+}
+
+.projects-container {
+  max-width: 1280px;
+  width: 100%;
+  text-align: center;
+}
+
+.projects-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* Filtros */
+.projects-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.filter-btn.active {
+  background-color: #3b82f6;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+}
+
+.filter-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Grid de proyectos */
+.projects-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+/* Tarjeta individual */
+.project-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+}
+
+.project-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.project-desc {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.8);
+  flex: 1;
+}
+
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+}
+
+.project-tech {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  background: rgba(255,255,255,0.1);
+  border-radius: 999px;
+}
+
+/* ============================
+   BOTONES
+   ============================ */
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.project-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  text-decoration: none;
+}
+
+.project-btn .btn-icon {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* ===== MODO OSCURO ===== */
+.dark .project-btn.demo {
+  background-color: rgba(59, 130, 246, 0.2);
+  color: #3b82f6;
+}
+
+.dark .project-btn.code {
+  background-color: #374151;
+  color: #f0f0f0;
+}
+
+.dark .project-btn.info {
+  background-color: #0f766e;
+  color: #14b8a6;
+}
+
+/* Hover dark mode */
+.dark .project-btn.demo:hover {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.dark .project-btn.demo:hover .btn-icon {
+  color: white;
+}
+
+.dark .project-btn.code:hover {
+  background-color: #0d1218;
+  color: white;
+}
+
+.dark .project-btn.code:hover .btn-icon {
+  color: white;
+}
+
+.dark .project-btn.info:hover {
+  background-color: #14b8a6;
+  color: white;
+}
+
+.dark .project-btn.info:hover .btn-icon {
+  color: white;
+}
+/* ===== HOVER MODO CLARO ===== */
+.light .project-btn.demo:hover {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.light .project-btn.demo:hover .btn-icon {
+  color: white;
+}
+
+.light .project-btn.code:hover {
+  background-color: #1f2937;
+  color: white;
+}
+
+.light .project-btn.code:hover .btn-icon {
+  color: white;
+}
+
+.light .project-btn.info:hover {
+  background-color: #10b981;
+  color: white;
+}
+
+.light .project-btn.info:hover .btn-icon {
+  color: white;
+}
+/* ============================
+   MODO CLARO
+   ============================ */
+.light .projects {
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  color: #1f2937;
+}
+
+.light .filter-btn {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #1f2937;
+}
+.light .filter-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.light .filter-btn.active {
+  background-color: #3b82f6;
+  color: white;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+}
+
+.light .project-card {
+  background: white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.light .project-desc {
+  color: rgba(31,41,55,0.8);
+}
+
+.light .project-tech {
+  background: rgba(0,0,0,0.05);
+}
+
+.light .project-btn.demo {
+  background-color: rgba(59, 130, 246, 0.2);
+  color: #3b82f6;
+}
+.light .project-btn.code {
+  background-color: rgba(0,0,0,0.05);
+  color: #1f2937;
+}
+.light .project-btn.info {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+}
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+@media (max-width: 768px) {
+  .projects {
+    padding: 3rem 1.5rem;
+  }
+
+  .project-image {
+    height: 160px;
+  }
+
+  .projects-title {
+    font-size: 2rem;
+  }
+}
