@@ -72,5 +72,19 @@
     "success": "¡Mensaje enviado con éxito!",
     "error": "Algo salió mal. Por favor, inténtalo de nuevo.",
     "conection": "Error de conexión con el servidor."
+  },
+  "validation": {
+    "name": {
+      "min": "El nombre debe tener al menos 2 caracteres",
+      "max": "El nombre no puede superar los 50 caracteres"
+    },
+    "email": {
+      "invalid": "El email no es válido",
+      "min": "El email debe tener al menos 6 caracteres"
+    },
+    "message": {
+      "min": "El mensaje debe tener al menos 10 caracteres",
+      "max": "El mensaje no puede superar los 500 caracteres"
+    }
   }
 }

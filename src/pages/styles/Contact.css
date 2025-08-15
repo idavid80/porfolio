@@ -1,183 +1,49 @@
-/* Contenedor principal */
 .contact {
   width: 100%;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /*padding: 2rem;*/
   box-sizing: border-box;
-  background: linear-gradient(135deg, #4f46e5, #3b82f6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #65f4cd 0%, #4799e9 100%);
+  /*background: linear-gradient(to right, #191654 0%, #43c6ac 100%);*/
   text-align: center;
-  color: white;
+  color: #182136;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Contenedor interno */
 .contact-container {
-  max-width: 600px;
-  width: 100%;
+  max-width: 900px;
+  width: 90%;
+  margin: 0 auto;
 }
 
-/* Título */
+/* Título y subtítulo */
 .contact-title {
   font-size: clamp(2rem, 6vw, 3rem);
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
-/* Subtítulo */
 .contact-subtitle {
   font-size: clamp(1rem, 3vw, 1.25rem);
-  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 2rem;
+  color: #222a38;
 }
 
-/* Formulario tipo Glassmorphism */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(14px);
-  border-radius: 1.5rem;
-  padding: 2rem;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-  transition: all 0.3s ease;
-}
-
-/* Inputs y textarea */
-.contact-form input,
-.contact-form textarea {
-  padding: 0.85rem 1rem;
-  border-radius: 0.75rem;
-  border: 1px solid rgba(255,255,255,0.3);
-  background-color: rgba(255,255,255,0.15);
+/* Modo oscuro */
+.dark .contact {
+  background: linear-gradient(to right, #191654 0%, #43c6ac 100%);
   color: white;
-  font-size: 1rem;
-  resize: none;
-  transition: all 0.2s ease;
 }
-
-/* Placeholder */
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: rgba(255,255,255,0.7);
-  font-style: italic;
+.dark .contact-subtitle {
+  color: #f3f4f6;
 }
-.contact-form input:focus::placeholder,
-.contact-form textarea:focus::placeholder {
-  color: rgba(255,255,255,0.5);
-}
-
-/* Focus en inputs */
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: #93c5fd;
-  background-color: rgba(255,255,255,0.25);
-}
-
-/* Botón */
-.contact-form button {
-  padding: 0.85rem;
-  border-radius: 999px;
-  font-weight: 600;
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
-  color: white;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-  transition: all 0.2s ease;
-}
-
-.contact-form button:hover {
-  transform: translateY(-2px);
-  background: linear-gradient(135deg, #60a5fa, #3b82f6);
-}
-
-/* Mensajes de estado */
-.status-message {
-  margin-top: 0.5rem;
-  font-weight: 500;
-}
-.status-message.success { color: #22c55e; }
-.status-message.error { color: #ef4444; }
 
 /* Responsive */
 @media (max-width: 768px) {
   .contact {
     padding: 1.5rem;
   }
-  .contact-form {
-    padding: 1.5rem;
-  }
 }
-
-/* ----- Modo oscuro con clase .dark ----- */
-.dark .contact {
-  background: linear-gradient(135deg, #111827, #1f2937);
-  color: #f3f4f6;
-}
-.dark .contact-subtitle {
-  color: rgba(243,244,246,0.85);
-}
-.dark .contact-form {
-  background: rgba(30,41,59,0.6);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
-}
-.dark .contact-form input,
-.dark .contact-form textarea {
-  background: rgba(30,41,59,0.3);
-  color: #f3f4f6;
-  border: 1px solid rgba(255,255,255,0.2);
-}
-.dark .contact-form input::placeholder,
-.dark .contact-form textarea::placeholder {
-  color: rgba(243,244,246,0.5);
-}
-.dark .contact-form input:focus,
-.dark .contact-form textarea:focus {
-  border-color: #3b82f6;
-  background-color: rgba(30,41,59,0.5);
-}
-.dark .contact-form button {
-  background: linear-gradient(135deg, #2563eb, #3b82f6);
-}
-.dark .contact-form button:hover {
-  background: linear-gradient(135deg, #3b82f6, #60a5fa);
-}
-
-/* Toggle */
-.status-toggle {
-  position: fixed;        /* Fijo en la pantalla */
-  bottom: 20px;           /* Desde abajo */
-  right: 20px;            /* Desde la derecha */
-  padding: 12px 20px;
-  border-radius: 8px;
-  color: #fff;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  z-index: 9999;          /* Siempre encima */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  min-width: 220px;
-}
-
-.status-toggle.success {
-  background-color: #28a745;
-}
-
-.status-toggle.error {
-  background-color: #dc3545;
-}
-
-.close-btn {
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1.2em;
-  cursor: pointer;
-}
-

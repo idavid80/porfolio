@@ -73,5 +73,19 @@
     "success": "Message sent successfully!",
     "error": "Something went wrong. Please try again.",
     "conection": "Connection error with server."
-  }
+  },
+    "validation": {
+    "name": {
+      "min": "Name must be at least 2 characters long",
+      "max": "Name cannot exceed 50 characters"
+    },
+    "email": {
+      "invalid": "Invalid email address",
+      "min": "Email must be at least 6 characters long"
+    },
+    "message": {
+      "min": "Message must be at least 10 characters long",
+      "max": "Message cannot exceed 500 characters"
+    }
+    }
 }

@@ -1,0 +1,129 @@
+/* Formulario tipo Glassmorphism */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(14px);
+  border-radius: 1.5rem;
+  padding: 2.5rem 1.5rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+.contact-form > div {
+  display: flex;
+  flex-direction: column; /* forzar que los errores queden debajo */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+/* Inputs y textarea */
+.contact-form input,
+.contact-form textarea {
+  width: 85%;
+  padding: 0.85rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #222a38;
+  font-size: 1rem;
+  resize: none;
+  transition: all 0.2s ease;
+}
+
+/* Placeholder */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #91b4cb;
+  font-style: italic;
+}
+.contact-form input:focus::placeholder,
+.contact-form textarea:focus::placeholder {
+  color: #b5eaf5;
+  transform: translateX(5px);
+}
+
+/* Focus en inputs */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #93c5fd;
+  background: linear-gradient(to right, #65f4cd 0%, #4799e9 100%);
+  color: #2e6ddb;
+
+}
+.btn-contain {
+  padding: 0.95rem 0.5rem;
+}
+/* Botón */
+.contact-form button {
+  font-weight: 600;
+  /*background: linear-gradient(135deg, #3b82f6, #2563eb);
+  background: linear-gradient(to right, #8aedf6 0%, #60a2f5 100%);
+  background: linear-gradient(to right, #a0b5eb 0%, #c9f0e4 100%);*/
+  background: linear-gradient(to right,  #4799e9, #65f4cd 100% 0%);
+  padding: 0.75rem 2rem;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  color: #222a38;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-2px);
+  /*background: linear-gradient(to right, #4799e9 0%, #2563eb 100%);*/
+  background: linear-gradient(to left,  #4799e9, #65f4cd 100% 0%);
+}
+
+/* ----- Modo oscuro con clase .dark ----- */
+.dark .contact-form {
+  background: rgba(30, 41, 59, 0.6);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+.dark .contact-form input,
+.dark .contact-form textarea {
+  background: rgba(30, 41, 59, 0.3);
+  color: #f3f4f6;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.dark .contact-form input::placeholder,
+.dark .contact-form textarea::placeholder {
+  color: rgba(255,255,255,0.6);
+  /*color: rgba(243, 244, 246, 0.5);*/
+}
+.dark .contact-form input:focus,
+.dark .contact-form textarea:focus {
+  border-color: #3b82f6;
+  background: linear-gradient(to right, #191654 0%, #43c6ac 100%);
+}
+.dark .contact-form button {
+  /*background: linear-gradient(135deg, #2563eb, #3b82f6);*/
+  background: linear-gradient(to right, #43c6ac, #191654);
+  color: white;
+}
+.dark .contact-form button:hover {
+  background: linear-gradient(to left, #43c6ac, #191654);
+}
+
+/* ERROR TEXT*/
+.error-text {
+  color: #e15454;
+  font-size: 1rem;
+  margin-top: 0.25rem;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+.error-text::before {
+  content: "⚠";
+  padding-right: 0.2rem;
+  font-size: 1rem;
+}
+
+/* Modo oscuro */
+.dark .contact-form .error-text {
+  color: #f87171; /* Rojo legible en fondo oscuro */
+}
