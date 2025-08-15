@@ -5,10 +5,10 @@ import Navbar from './components/layout/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
-import Blog from './pages/Blog'; // Asumimos que esta es la lista/resumen de posts
-import BlogPost from './pages/BlogPost'; // Esta es la página de detalle de un post
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
-import './App.css'; // Mantenemos la importación de App.css para los estilos de layout
+import './App.css';
 
 // Componente que contiene todas las secciones principales desplazables
 function OnePageSections() {
@@ -46,64 +46,7 @@ export default function App() {
         </Routes>
       </main>
 
-      {/* Aquí podrías añadir un componente Footer si lo tuvieras. */}
+      {/*Footer. */}
     </div>
   );
 }
-/*import React from 'react';
-import { Routes, Route } from 'react-router-dom'; // Ya no necesitamos importar 'BrowserRouter as Router' aquí
-import Navbar from './components/layout/Navbar';
-import Home from './pages/Home';
-import About from './pages/About';
-import Projects from './pages/Projects';
-import Blog from './pages/Blog';
-import BlogPost from './pages/BlogPost';
-import Contact from './pages/Contact';
-import './App.css';
-
-export default function App() {
-  return (
-    <div className="app-container">
-      <Navbar />
-      <main className="main-content">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:id" element={<BlogPost />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<h1 className="text-center py-20">404 - Page Not Found</h1>} />
-        </Routes>
-      </main>
-
-    </div>
-  );
-}
-*/
-/*
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/layout/Navbar';
-import Home from './pages/Home';
-import About from './pages/About';
-import Projects from './pages/Projects';
-import Blog from './pages/Blog';
-import Contact from './pages/Contact';
-
-export default function App() {
-  return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <main className="flex-grow p-6">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </main>
-    </div>
-  );
-}*/

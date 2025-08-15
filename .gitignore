@@ -445,3 +445,4 @@ dist-ssr
 
 .env
 >>>>>>> update/version_2
+.vercel

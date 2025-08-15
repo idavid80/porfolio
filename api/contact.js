@@ -1,8 +1,9 @@
 import nodemailer from "nodemailer";
+import path from "path";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "Método no permitido" });
-
+  const logoPath = path.join(process.cwd(), "public/logo.png");
   const { name, email, message } = req.body;
   if (!name || !email || !message)
     return res.status(400).json({ error: "Todos los campos son obligatorios." });
@@ -52,7 +53,7 @@ export default async function handler(req, res) {
         attachments: [
             {
               filename: 'logo.png',
-              path: 'https://porfolio-idavid80.vercel.app/assets/logo-CBIgVd2Y.png', // ruta relativa a tu server/index.js
+              path: logoPath,
               cid: 'logo'
             }]
     });
