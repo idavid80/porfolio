@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { FaGithub, FaDownload } from "react-icons/fa";
 import "./styles/Home.css";
 import TypingText from "../components/ui/TypingText";
-import profile from '../assets/profile.png'
+import profile from '../assets/profile.webp'
 import Modal from '../components/ui/Modal'
 
 export default function Home({ id }) {

@@ -1,5 +1,5 @@
 // src/data/projects.js
-import wineAppImg from "../assets/projects/wineapp.png";
+import wineAppImg from "../assets/projects/wineapp.webp";
 import marvelImg from "../assets/projects/the-bridge.png";
 import aiImg from "../assets/projects/ai.jpg";
 import dashboardImg from "../assets/projects/Tree_conection.jpeg";
