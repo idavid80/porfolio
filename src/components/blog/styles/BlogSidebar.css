@@ -13,3 +13,85 @@
   font-weight: bold;
   color: #1d4ed8;
 }
+
+/* Estilos de lista de posts en sidebar */
+.sidebar-content h3 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.sidebar-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-content li {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-content li a {
+  text-decoration: none;
+  color: #111827;
+  font-size: 0.9rem;
+}
+
+.sidebar-date {
+  color: #6b7280;
+  font-size: 0.8rem;
+}
+
+/* Sidebar mobile */
+@media (max-width: 768px) {
+
+  .toggle-sidebar {
+    display: block;
+    position: fixed;
+    top: 5rem;
+    left: 1rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    z-index: 1100;
+    cursor: pointer;
+  }
+
+  .blog-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 1rem;
+  }
+
+  .blog-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-content {
+    height: 100%;
+    overflow-y: auto;
+  }
+}
+/* ================= Dark Mode ================== */
+
+.dark .sidebar-date {
+  color: #9ca3af;
+}
+.dark .blog-sidebar {
+  background: #1f2937;
+  box-shadow: 0 2px 6px rgba(255,255,255,0.05);
+}
+
+.dark .blog-sidebar li a {
+  color: #f9fafb;
+}
+
+.dark .blog-sidebar li.active a {
+  color: #3b82f6;
+}

@@ -20,9 +20,9 @@ export default function BlogMain() {
           {sortedPosts.map((post) => (
             <article key={post.id} className="blogpost-card">
               <img src={post.image} alt={post.title[i18n.language]} />
-              <h2>{post.title[i18n.language]}</h2>
+              <h2 className="blogpost-title">{post.title[i18n.language]}</h2>
               <p className="blogpost-date">{post.date}</p>
-              <p>{post.excerpt[i18n.language]}</p>
+              <p className="blogpost-description">{post.excerpt[i18n.language]}</p>
               <Link to={`/blog/${post.id}`} className="blog-readmore">
                 {i18n.language.startsWith("es") ? "Leer más" : "Read more"}
               </Link>
