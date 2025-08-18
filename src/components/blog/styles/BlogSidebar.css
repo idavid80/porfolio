@@ -1,0 +1,15 @@
+/* Sidebar */
+
+.blog-sidebar {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 250px;
+  box-sizing: border-box;
+}
+
+.blog-sidebar li.active a {
+  font-weight: bold;
+  color: #1d4ed8;
+}

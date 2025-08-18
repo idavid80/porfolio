@@ -9,6 +9,7 @@ import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
 import './App.css';
+import BlogMain from "./components/blog/BlogMain";
 
 // Componente que contiene todas las secciones principales desplazables
 function OnePageSections() {
@@ -38,6 +39,7 @@ export default function App() {
           {/* Ruta principal que renderiza todas las secciones en una sola página */}
           <Route path="/" element={<OnePageSections />} />
 
+          <Route path="/blog" element={ <BlogMain/> } />
           {/* Ruta para las publicaciones individuales del blog (sigue siendo una página separada) */}
           <Route path="/blog/:id" element={<BlogPost />} />
 

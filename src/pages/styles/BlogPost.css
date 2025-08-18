@@ -1,188 +1,230 @@
-/* ========================================
-   BlogPost CSS - Light & Dark Mode
-   ======================================== */
-.blogpost-error {
+/* Contenedor principal del blog */
+.blogpage-container {
+  padding-top: 5rem; /* altura navbar */
   width: 100%;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
-  color: #1f2937;
-}
-
-.blogpost-article {
-  max-width: 768px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 4rem 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  background: transparent;
-  
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+  background-color: #f8f9fa;
 }
 
-.blogpost-article img {
-  border-radius: 0.5rem;
-  margin-bottom: 0.15rem;
+/* Artículo individual y cards de listado */
+.blog-main-content,
+.blogpost-article {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
   width: 100%;
-  height: auto;
+  box-sizing: border-box;
+  color: #111827;
 }
 
-.blogpost-title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 0.1rem;
+.blogpost-card img,
+.blogpost-article img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.blogpost-card h2,
+.blogpost-article h1 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .blogpost-date {
-  color: #9ca3af;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
   font-size: 0.875rem;
-  margin-bottom: 0.2rem;
 }
 
-.blogpost-content h1,
-.blogpost-content h2,
-.blogpost-content h3,
-.blogpost-content h4,
-.blogpost-content h5,
-.blogpost-content h6 {
-  font-weight: 700;
-  margin-top: 0.1rem;
-  margin-bottom: 0.1rem;
+.blog-readmore {
+  text-decoration: underline;
+  color: #1d4ed8;
+  cursor: pointer;
 }
 
-.blogpost-content p {
-  line-height: 1.7;
+.blogpost-content {
+  line-height: 1.6;
+}
+
+/* Sidebar */
+/*
+.blog-sidebar {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 250px;
+  box-sizing: border-box;
+}
+
+.blog-sidebar li.active a {
+  font-weight: bold;
+  color: #1d4ed8;
+}
+*/
+/* Toggle button móvil */
+.toggle-sidebar {
+  display: none;
+}
+
+/* Botón volver al blog */
+.back-to-blog {
+  display: inline-block;
   margin-bottom: 1rem;
-}
-
-.blogpost-content a {
-  color: #3b82f6;
+  color: #1d4ed8;
   text-decoration: underline;
 }
 
-.blogpost-content ul,
-.blogpost-content ol {
-  margin-left: 1.5rem;
-  margin-bottom: 1rem;
+/* Sidebar mobile */
+@media (max-width: 768px) {
+
+  .toggle-sidebar {
+    display: block;
+    position: fixed;
+    top: 5rem;
+    left: 1rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    z-index: 1100;
+    cursor: pointer;
+  }
+
+  .blog-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 1rem;
+  }
+
+  .blog-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-content {
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  /* Botón volver al blog móvil */
+  .back-to-blog {
+    position: fixed;
+    top: 5rem;
+    right: 1rem;
+    background: #1d4ed8;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    z-index: 5;
+  }
 }
 
-.blogpost-content blockquote {
-  border-left: 4px solid #d1d5db;
-  padding-left: 1rem;
+/* Estilos de lista de posts en sidebar */
+.sidebar-content h3 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.sidebar-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-content li {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-content li a {
+  text-decoration: none;
+  color: #111827;
+  font-size: 0.9rem;
+}
+
+.sidebar-date {
   color: #6b7280;
-  font-style: italic;
-  margin-bottom: 1rem;
+  font-size: 0.8rem;
 }
 
-.blogpost-content pre {
-  overflow-x: auto;
-  max-width: 100%;
-  padding: 1rem;
-  background-color: #f3f4f6;
-  border-radius: 0.5rem;
+/* ================= Dark Mode ================== */
+.dark .blogpage-container {
+  background-color: #111827;
 }
 
-.blogpost-content code {
-  word-break: break-word;
-  background-color: #e5e7eb;
-  padding: 0.2rem 0.4rem;
-  border-radius: 0.3rem;
-}
-
-/* Tablas */
-.blogpost-content table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 1rem;
-  overflow-x: auto;
-  display: block;
-}
-
-.blogpost-content th,
-.blogpost-content td {
-  border: 1px solid #d1d5db;
-  padding: 0.5rem 0.75rem;
-  text-align: left;
-  color: #1f2937;
-}
-
-.blogpost-content th {
-  background-color: #e5e7eb;
-}
-
-/* 🌙 Dark Mode */
-.dark .blogpost-error {
-  background: linear-gradient(135deg, #111827, #1f2937);
-  color: #f3f4f6;
-}
+.dark .blog-main-content,
 .dark .blogpost-article {
-
   background: #1f2937;
-}
-.dark .blogpost-title,
-.dark .blogpost-content th,
-.dark .blogpost-content td,
-.dark .blogpost-content p,
-.dark .blogpost-content li,
-.dark .blogpost-date,
-.dark .blogpost-content blockquote {
-  color: #f3f4f6;
-  
+  color: #f9fafb;
 }
 
+.dark .blogpost-card h2,
+.dark .blogpost-article h1 {
+  color: #f9fafb;
+}
+
+.dark .blogpost-date,
+.dark .sidebar-date {
+  color: #9ca3af;
+}
+
+.dark .blog-readmore {
+  color: #3b82f6;
+}
+
+.dark .blog-sidebar {
+  background: #1f2937;
+  box-shadow: 0 2px 6px rgba(255,255,255,0.05);
+}
+
+.dark .blog-sidebar li a {
+  color: #f9fafb;
+}
+
+.dark .blog-sidebar li.active a {
+  color: #3b82f6;
+}
+
+.dark .toggle-sidebar {
+  background: #374151;
+  color: #f9fafb;
+}
+
+.dark .back-to-blog {
+  background: #333;
+  color: #f9fafb;
+}
+
+/* Estilo global para bloques de código en blogpost */
+.blogpost-content pre {
+  background-color: #1f2937; /* fondo oscuro para código */
+  color: #f9fafb;            /* texto claro */
+  padding: 1rem;
+  border-radius: 10px;
+  overflow-x: auto;          /* permite scroll horizontal */
+  white-space: pre;          /* mantiene los espacios y saltos de línea */
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Diferenciar bloques de bash/terminal */
+.blogpost-content code {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.875rem;
+}
+
+/* Dark mode */
 .dark .blogpost-content pre {
   background-color: #111827;
-  color: #f3f4f6;
-}
-
-.dark .blogpost-content code {
-  background-color: #1f2937;
-  color: #f3f4f6;
-}
-
-.dark .blogpost-content th {
-  background-color: #1f2937;
-}
-
-.dark .blogpost-content table th,
-.dark .blogpost-content table td {
-  border-color: #374151;
-}
-
-/* Responsive */
-@media (max-width: 640px) {
-  .blogpost-article {
-    padding: 2rem 1rem;
-    max-width: 100%;
-  }
-
-  .blogpost-title {
-    font-size: 1.5rem;
-  }
-
-  .blogpost-content h1 {
-    font-size: 1.25rem;
-  }
-
-  .blogpost-content h2 {
-    font-size: 1.125rem;
-  }
-
-  .blogpost-content p,
-  .blogpost-content li {
-    font-size: 0.95rem;
-  }
-
-  .blogpost-content img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .blogpost-content table {
-    display: block;
-    font-size: 0.9rem;
-  }
+  color: #f9fafb;
 }

@@ -5,6 +5,8 @@ import ReactMarkdown from 'react-markdown';
 import { posts } from '../data/posts';
 import './styles/BlogPost.css';
 import remarkGfm from 'remark-gfm'
+import BlogSidebar from '../components/blog/BlogSidebar';
+
 // Importamos todos los .md de la carpeta post/
 const allPosts = import.meta.glob('../post/*.md', { query: '?raw', eager: true });
 
@@ -39,17 +41,22 @@ export default function BlogPost() {
       </div>
     );
   }
-
   return (
-    <article className="blogpost-article">
-      <img src={post.image} alt={post.title[i18n.language]} />
-      {/* <h1 className="blogpost-title">{post.title[i18n.language]}</h1> */}
-      <p className="blogpost-date">{post.date}</p>
-      <div className="blogpost-content">
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>
-          {content}
-        </ReactMarkdown>
-      </div>
-    </article>
+    <div className="blogpage-container">
+      <Link to="/blog" className="back-to-blog">
+        ← {i18n.language.startsWith("es") ? "Volver al Blog" : "Back to Blog"}
+      </Link>
+        <article className="blogpost-article">
+          <img src={post.image} alt={post.title[i18n.language]} />
+          <p className="blogpost-date">{post.date}</p>
+          <div className="blogpost-content">
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {content}
+            </ReactMarkdown>
+          </div>
+        </article>
+        <BlogSidebar />
+
+    </div>
   );
 }
